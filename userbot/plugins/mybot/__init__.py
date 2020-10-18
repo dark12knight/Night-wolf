@@ -1,5 +1,5 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
+#    Night-wolf - UserBot
+#    Copyright (C) 2020 Night-wolf
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -24,7 +24,7 @@ from userbot.__init__ import StartTime
 from datetime import datetime
 
 # /start
-started = f"**Welcome To TeleBot**\nHi, this is the assistant bot of {ALIVE_NAME}.\nSend `/help` to see what you can do here!\n\n(c) @TeleBotSupport"
+started = f"**Welcome To Night-wolf**\nHi, this is the assistant bot of {ALIVE_NAME}.\nSend `/help` to see what you can do here!\n\n"
 
 # /help
 helpmefast = "Here are the things that you can do with this bot!\n\n`/info @username` - get information about the user.\n`/ping` - Ping stats\n`/tr <lang_code>` - Use as reply to the text to translate, language codes can be foung [here](https://t.me/TeleBotHelpChat/22678)!\n`/id` - To get user/sender id.\n`/help` - This menu.\n\n__Set-up your own TeleBot via @TeleBotSupport to get such amazing features and more!__"
@@ -58,4 +58,4 @@ def get_readable_time(seconds: int) -> str:
 start = datetime.now()
 end = datetime.now()
 ms = (end - start).microseconds / 1000
-forping = f"🏓Ping speed: {ms}"
+forping = f"Pong: {ms}"
