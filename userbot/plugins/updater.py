@@ -1,12 +1,12 @@
-# For TeleBot
+# For Wolf
 # Copyright (C) 2019 The Raphielscape Company LLC.
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 # credits to @AvinashReddy3108
-# Rewritten for TeleBot by @xditya
+# Rewritten for TeleBot by @xark047
 
 """
-This module is used for updating TeleBot
+This module is used for updating Wolf
 """
 
 from os import remove, execle, path, makedirs, getenv, environ
@@ -22,8 +22,8 @@ requirements_path = path.join(
 
 HEROKU_API_KEY = Var.HEROKU_API_KEY
 HEROKU_APP_NAME = Var.HEROKU_APP_NAME
-GIT_REPO_NAME = "TeleBot"
-UPSTREAM_REPO_URL = "https://github.com/xditya/TeleBot"
+GIT_REPO_NAME = "Night-wolf"
+UPSTREAM_REPO_URL = "https://github.com/dark12knight/Night-wolf"
 
 async def gen_chlog(repo, diff):
     ch_log = ''
@@ -88,7 +88,7 @@ async def upstream(ups):
             f'**[UPDATER]:**` Looks like you are using your own custom branch ({ac_br}). '
             'in that case, Updater is unable to identify '
              'which branch is to be merged. '
-            'Please checkout the official branch of TeleBot`')
+            'Please checkout the official branch of Night-wolf`')
         repo.__del__()
         return
 
