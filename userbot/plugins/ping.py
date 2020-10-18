@@ -1,11 +1,12 @@
-# special thanks to Sur_vivor 
+# special thanks to Sur_vivor
 # Re-written for TeleBot by @its_xditya
 
-from telethon import events
-from datetime import datetime
-from userbot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.__init__ import StartTime
 import time
+from datetime import datetime
+
+from userbot.__init__ import StartTime
+from userbot.utils import admin_cmd, sudo_cmd
+
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -34,15 +35,18 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-#@command(pattern="^.ping$")
-@borg.on(admin_cmd(pattern="ping$"))
+
+# @command(pattern="^.ping$")
+
+
+@telebot.on(admin_cmd(pattern="ping$"))
 @telebot.on(sudo_cmd(pattern="ping$", allow_sudo=True, incoming=True))
 async def _(event):
     if event.fwd_from:
         return
     start = datetime.now()
-    await event.edit(" Pong!")
+    await event.edit("🏓 Pong!")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - StartTime))
-    await event.edit(f"Pong!: {ms}\n🕒: {uptime}")
+    await event.edit(f"🏓Ping speed: {ms}\n🤖TeleBot Uptime: {uptime}")
